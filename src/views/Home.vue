@@ -3,14 +3,14 @@
     <h1>Game</h1>
     <div class="row">
       <div class="small-5 columns text-center">
-        <img src="/images/rock.jpg" alt="" class="text-center">
+        <img src="/images/rock.jpg" alt="보" class="text-center">
         <h1 class="text-center"><strong>YOU</strong></h1>
       </div>
       <div class="small-2 columns text-center">
         <h1 style="font-size:100px;"><strong>3</strong></h1>
       </div>
       <div class="small-5 columns text-center">
-        <img src="/images/question.jpg" alt="" class="text-center">
+        <img src="/images/question.jpg" alt="물음표" class="text-center">
         <h1 class="text-center"><strong>Computer</strong></h1>
       </div>
     </div>
@@ -18,18 +18,18 @@
     <div class="row">
       <div class="small-6 columns text-center">
         <div class="battle-wrap">
-          <img src="/images/heart.jpg" class="heart" alt="">
-          <img src="/images/heart.jpg" class="heart" alt="">
-          <img src="/images/heart.jpg" class="heart" alt="">
+          <img src="/images/heart.jpg" class="heart" alt="하트">
+          <img src="/images/heart.jpg" class="heart" alt="하트">
+          <img src="/images/heart.jpg" class="heart" alt="하트">
         </div>
       </div>
       <div class="small-6 columns text-center">
         <div class="battle-wrap">
-          <img src="/images/heart.jpg" class="heart" alt="">
-          <img src="/images/heart.jpg" class="heart" alt="">
-          <img src="/images/heart.jpg" class="heart" alt="">
+          <img src="/images/heart.jpg" class="heart" alt="하트">
+          <img src="/images/heart.jpg" class="heart" alt="하트">
+          <img src="/images/heart.jpg" class="heart" alt="하트">
         </div>
-      </div>용
+      </div>
     </div>
 
     <div class="row">
