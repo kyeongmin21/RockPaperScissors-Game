@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <h1>Game</h1>
     <div class="row">
       <div class="small-5 columns text-center">
         <img src="/images/rock.jpg" alt="보" class="text-center">
@@ -72,3 +71,8 @@ export default {
   name: 'Home'
 }
 </script>
+
+<style>
+@import "/css/common.css";
+@import "/css/foundation.min.css";
+</style>
