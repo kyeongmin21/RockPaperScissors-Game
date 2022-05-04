@@ -44,9 +44,9 @@
       <div class="small-6 columns text-center">
         <div class="row">
           <div class="small-8 small-offset-2 columns text-center">
-            <label class="radio-label"><input type="radio"> 가위</label>
-            <label class="radio-label"><input type="radio"> 바위</label>
-            <label class="radio-label"><input type="radio"> 보</label>
+            <label class="radio-label"><input type="radio" v-model="myChoice" value="scissor" /> 가위</label>
+            <label class="radio-label"><input type="radio" v-model="myChoice" value="rock" /> 바위</label>
+            <label class="radio-label"><input type="radio" v-model="myChoice" value="paper" /> 보</label>
           </div>
         </div>
         <div class="row">
