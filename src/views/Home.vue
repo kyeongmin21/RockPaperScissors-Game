@@ -13,7 +13,7 @@
         <h1 class="text-center"><strong>YOU</strong></h1>
       </div>
       <div class="small-2 columns text-center">
-        <h1 style="font-size:100px;"><strong>3</strong></h1>
+        <h1 style="font-size:100px;"><strong>{{ count }}</strong></h1>
       </div>
       <div class="small-5 columns text-center">
         <img src="/images/question.jpg" alt="물음표" class="text-center">
@@ -50,7 +50,7 @@
         <div class="row">
           <div class="small-12 columns">
             <div class="text-center">
-              <button class="start-btn">선택 완료!</button>
+              <button class="start-btn" @click="startGame">선택 완료!</button>
             </div>
             <div class="loading"> 기다리는 중...</div>
           </div>
@@ -78,7 +78,22 @@ export default {
   name: 'Home',
   data() {
     return {
-      myChoice: null
+      myChoice: null,
+      count: 3
+    }
+  },
+  methods: {
+    startGame () {
+      if (this.myChoice === null) {
+        alert('가위 바위 보 중 하나를 선택해주세요')
+      } else {
+        let countDown = setInterval(() => {
+          this.count--
+          if (this.count === 0) {
+            clearInterval(countDown)
+          }
+        }, 1000)
+      }
     }
   }
 }
