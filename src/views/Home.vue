@@ -93,7 +93,14 @@ export default {
   watch: {
     count(newVal) {
       if (newVal === 0) {
-        console.log('0이 되었습니다.')
+        let number = Math.trunc(Math.random() * 10)
+        if (number < 3) {
+          this.comChoice = 'scissor'
+        } else if (number < 6) {
+          this.comChoice = 'rock'
+        } else {
+          this.comChoice = 'paper'
+        }
       }
     }
   },

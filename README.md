@@ -18,4 +18,5 @@
 * data에 comChoice 변수를 null로 선언
 * html로 가서 v-if / v-else 이미지 태그를 복붙해서 컴퓨터에도 코드 넣어주기 (myChoice가 아니라 comChoice로 변경하기)
 * count의 값이 0 이 되는 것을 알기 위해 watch 감시자를 사용한다.
-
+* number 라는 변수를 만들고, Math.random() 함수로 숫자를 랜덤으로 나오게 변수에 할당한다.
+* if 문을 통해 number의 분기점을 지정해 주어서 가위, 바위, 보가 나오게 한다.
