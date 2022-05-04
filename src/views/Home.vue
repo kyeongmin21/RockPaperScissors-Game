@@ -31,16 +31,26 @@
     <div class="row">
       <div class="small-6 columns text-center">
         <div class="battle-wrap">
-          <img src="/images/heart.jpg" class="heart" alt="하트">
-          <img src="/images/heart.jpg" class="heart" alt="하트">
-          <img src="/images/heart.jpg" class="heart" alt="하트">
+          <img v-for="life in lifeOfMe"
+               src="/images/heart.jpg"
+               class="heart"
+               alt="나의 하트생명" />
+          <img v-for="life in 3 - lifeOfMe"
+               src="/images/broken-heart.jpg"
+               class="heart"
+               alt="깨진 나의 하트생명" />
         </div>
       </div>
       <div class="small-6 columns text-center">
         <div class="battle-wrap">
-          <img src="/images/heart.jpg" class="heart" alt="하트">
-          <img src="/images/heart.jpg" class="heart" alt="하트">
-          <img src="/images/heart.jpg" class="heart" alt="하트">
+          <img v-for="life in lifeOfCom"
+               src="/images/heart.jpg"
+               class="heart"
+               alt="컴퓨터 하트생명" />
+          <img v-for="life in 3 - lifeOfCom"
+               src="/images/heart.jpg"
+               class="heart"
+               alt="깨진 컴퓨터 하트생명" />
         </div>
       </div>
     </div>
@@ -131,7 +141,7 @@ export default {
           if (this.count === 0) {
             clearInterval(countDown)
           }
-        }, 1000)
+        }, 500)
       }
     }
   }
