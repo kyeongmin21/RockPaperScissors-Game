@@ -2,16 +2,14 @@
   <div class="home">
     <div class="row">
       <div class="small-5 columns text-center">
-        <img
-          v-if="myChoice !== null"
-          :src="'images/' + myChoice + '.jpg'"
-          alt="보"
-          class="text-center">
-        <img
-          v-else
-          :src="'/images/question.jpg'"
-          alt="보"
-          class="text-center">
+        <img v-if="myChoice !== null"
+             :src="'images/' + myChoice + '.jpg'"
+             alt="보"
+             class="text-center">
+        <img v-else
+             :src="'/images/question.jpg'"
+             alt="보"
+             class="text-center">
         <h1 class="text-center"><strong>YOU</strong></h1>
       </div>
       <div class="small-2 columns text-center">
@@ -44,9 +42,9 @@
       <div class="small-6 columns text-center">
         <div class="row">
           <div class="small-8 small-offset-2 columns text-center">
-            <label class="radio-label"><input type="radio" v-model="myChoice" value="scissor" /> 가위</label>
-            <label class="radio-label"><input type="radio" v-model="myChoice" value="rock" /> 바위</label>
-            <label class="radio-label"><input type="radio" v-model="myChoice" value="paper" /> 보</label>
+            <label class="radio-label"><input type="radio" v-model="myChoice" value="scissor"/> 가위</label>
+            <label class="radio-label"><input type="radio" v-model="myChoice" value="rock"/> 바위</label>
+            <label class="radio-label"><input type="radio" v-model="myChoice" value="paper"/> 보</label>
           </div>
         </div>
         <div class="row">
