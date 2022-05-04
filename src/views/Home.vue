@@ -2,7 +2,16 @@
   <div class="home">
     <div class="row">
       <div class="small-5 columns text-center">
-        <img src="/images/rock.jpg" alt="보" class="text-center">
+        <img
+          v-if="myChoice !== null"
+          :src="'images/' + myChoice + '.jpg'"
+          alt="보"
+          class="text-center">
+        <img
+          v-else
+          :src="'/images/question.jpg'"
+          alt="보"
+          class="text-center">
         <h1 class="text-center"><strong>YOU</strong></h1>
       </div>
       <div class="small-2 columns text-center">
@@ -68,7 +77,12 @@
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Home',
+  data() {
+    return {
+      myChoice: null
+    }
+  }
 }
 </script>
 
