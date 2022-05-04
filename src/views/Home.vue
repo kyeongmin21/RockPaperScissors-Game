@@ -4,11 +4,11 @@
       <div class="small-5 columns text-center">
         <img v-if="myChoice !== null"
              :src="'images/' + myChoice + '.jpg'"
-             alt="보"
+             alt="가위바위보이미지"
              class="text-center">
         <img v-else
              :src="'/images/question.jpg'"
-             alt="보"
+             alt="물음표이미지"
              class="text-center">
         <h1 class="text-center"><strong>YOU</strong></h1>
       </div>
@@ -16,7 +16,14 @@
         <h1 style="font-size:100px;"><strong>{{ count }}</strong></h1>
       </div>
       <div class="small-5 columns text-center">
-        <img src="/images/question.jpg" alt="물음표" class="text-center">
+        <img v-if="comChoice !== null"
+             :src="'images/' + comChoice + '.jpg'"
+             alt="가위바위보이미지"
+             class="text-center">
+        <img v-else
+             :src="'/images/question.jpg'"
+             alt="물음표이미지"
+             class="text-center">
         <h1 class="text-center"><strong>Computer</strong></h1>
       </div>
     </div>
@@ -79,7 +86,15 @@ export default {
   data() {
     return {
       myChoice: null,
+      comChoice: null,
       count: 3
+    }
+  },
+  watch: {
+    count(newVal) {
+      if (newVal === 0) {
+        console.log('0이 되었습니다.')
+      }
     }
   },
   methods: {
