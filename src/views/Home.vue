@@ -114,6 +114,10 @@ export default {
         else if (this.myChoice === 'paper' && this.comChoice === 'scissor') this.winner = 'com'
         else if (this.myChoice === 'rock' && this.comChoice === 'paper') this.winner = 'com'
         else this.winner = 'error'
+
+        // 하트생명 차감
+         if (this.winner === 'me') this.lifeOfCom--
+         else if (this.winner === 'com') this.lifeOfMe--
       }
     }
   },
