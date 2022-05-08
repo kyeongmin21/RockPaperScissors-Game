@@ -147,9 +147,33 @@ export default {
         }
         this.logs.unshift(log)
       }
+    },
+    lifeOfMe(newVal) {
+      if (newVal === 0) {
+        setTimeout(() => {
+          confirm('안타깝네요. 당신이 패배하였습니다.')
+          this.init()
+        }, 500)
+      }
+    },
+    lifeOfYou(newVal) {
+      if (newVal === 0) {
+        setTimeout(() => {
+          confirm('축하합니다. 당신이 이겼습니다.')
+          this.init()
+        }, 500)
+      }
     }
   },
   methods: {
+    init() {
+      this.lifeOfMe = 3
+      this.lifeOfCom = 3
+      this.myChoice = null
+      this.comChoice = null
+      this.winner = null
+      this.logs = []
+    },
     startGame() {
       // 버튼이 보이지 않음
       this.isSelectable = false
