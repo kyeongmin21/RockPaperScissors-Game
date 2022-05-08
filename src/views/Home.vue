@@ -135,7 +135,7 @@ export default {
 
         // 결과를 알려주는 로그
         let log = `You: ${this.myChoice}, Computer: ${this.comChoice}`
-        this.logs.push(log)
+        this.logs.unshift(log)
       }
     }
   },
