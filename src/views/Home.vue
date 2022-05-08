@@ -101,7 +101,8 @@ export default {
       count: 3,
       lifeOfMe: 3,
       lifeOfCom: 3,
-      isSelectable: true
+      isSelectable: true,
+      logs: []
     }
   },
   watch: {
@@ -129,9 +130,14 @@ export default {
         // 하트생명 차감
         if (this.winner === 'me') this.lifeOfCom--
         else if (this.winner === 'com') this.lifeOfMe--
-        // 버튼은 다시 보이게 됨
+        // 초깃값 셋팅
         this.count = 3
+        // 버튼은 다시 보이게 됨
         this.isSelectable = true
+
+        // 결과를 알려주는 로그
+        let log = `You: ${this.myChoice}, Computer: ${this.comChoice}`
+        this.logs.push(log)
       }
     }
   },
