@@ -81,7 +81,14 @@
     <div class="row">
       <div class="small-12 columns log">
         <ul>
-          <li v-for="log in logs" :key="log">{{ log }}</li>
+          <li v-for="log in logs"
+              :class="{
+              'win-log': log.winner === 'me',
+              'defeat-log': log.winner === 'com',
+              'draw-log': log.winner === 'no one'
+              }"
+          >{{ log.message }}
+          </li>
         </ul>
       </div>
     </div>
@@ -134,7 +141,10 @@ export default {
         this.isSelectable = true
 
         // 결과를 알려주는 로그
-        let log = `You: ${this.myChoice}, Computer: ${this.comChoice}`
+        let log = {
+          message: `You: ${this.myChoice}, Computer: ${this.comChoice}`,
+          winner: this.winner
+        }
         this.logs.unshift(log)
       }
     }
