@@ -34,11 +34,11 @@
           <img v-for="life in lifeOfMe"
                src="/images/heart.jpg"
                class="heart"
-               alt="나의 하트생명" />
+               alt="나의 하트생명"/>
           <img v-for="life in 3 - lifeOfMe"
                src="/images/broken-heart.jpg"
                class="heart"
-               alt="깨진 나의 하트생명" />
+               alt="깨진 나의 하트생명"/>
         </div>
       </div>
       <div class="small-6 columns text-center">
@@ -46,11 +46,11 @@
           <img v-for="life in lifeOfCom"
                src="/images/heart.jpg"
                class="heart"
-               alt="컴퓨터 하트생명" />
+               alt="컴퓨터 하트생명"/>
           <img v-for="life in 3 - lifeOfCom"
                src="/images/heart.jpg"
                class="heart"
-               alt="깨진 컴퓨터 하트생명" />
+               alt="깨진 컴퓨터 하트생명"/>
         </div>
       </div>
     </div>
@@ -66,10 +66,10 @@
         </div>
         <div class="row">
           <div class="small-12 columns">
-            <div class="text-center">
+            <div class="text-center" v-if="isSelectable">
               <button class="start-btn" @click="startGame">선택 완료!</button>
             </div>
-            <div class="loading"> 기다리는 중...</div>
+            <div class="loading" v-else> 기다리는 중...</div>
           </div>
         </div>
       </div>
@@ -100,7 +100,8 @@ export default {
       winner: null,
       count: 3,
       lifeOfMe: 3,
-      lifeOfCom: 3
+      lifeOfCom: 3,
+      isSelectable: true
     }
   },
   watch: {
@@ -126,13 +127,18 @@ export default {
         else this.winner = 'error'
 
         // 하트생명 차감
-         if (this.winner === 'me') this.lifeOfCom--
-         else if (this.winner === 'com') this.lifeOfMe--
+        if (this.winner === 'me') this.lifeOfCom--
+        else if (this.winner === 'com') this.lifeOfMe--
+        // 버튼은 다시 보이게 됨
+        this.count = 3
+        this.isSelectable = true
       }
     }
   },
   methods: {
     startGame() {
+      // 버튼이 보이지 않음
+      this.isSelectable = false
       if (this.myChoice === null) {
         alert('가위 바위 보 중 하나를 선택해주세요')
       } else {
