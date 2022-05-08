@@ -81,9 +81,7 @@
     <div class="row">
       <div class="small-12 columns log">
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li v-for="log in logs" :key="log">{{ log }}</li>
         </ul>
       </div>
     </div>
