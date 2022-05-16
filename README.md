@@ -1,7 +1,8 @@
 # Rock Paper Scissors - Game
 
 ## 1. radio box를 선택한 이미지 보여지게 하기
-* v-for 반복문으로 radio 뒤에 가위,바위,보 글씨 나오게 하기 : data 에 selects 배열 안에 객체로 만들기
+* data 에 selects 배열객체 만들기
+* v-for 반복문으로 radio 뒤에 가위,바위,보 글씨 나오게 하기
 * :value="select.value" 고 {{ selects.name }}으로 바인딩
 * 이미지 태그에 src 속성을 v-bind (태그의 속성을 동적으로 변경할 때 사용)
 * computed 속성을 사용하여 myChoice 가 null 이면 ? 물음표 이미지가 보여지게 하고, 값이 있으면 해당 손 이미지가 보여지게 한다.
@@ -12,7 +13,7 @@
 ## 2. 선택완료 클릭 버튼
 * 선택완료 버튼에 @click 클릭 이벤트 추가
 * startGame 함수 안에서 만약에(if) myChoice 가 null 일 경우 alert 띄우기
-* 숫자3을 {{ count }}로 바인딩 해주기
+* 숫자 3을 {{ count }}로 바인딩 해주기
 * 선택완료 버튼 누르면 1초 마다 (setInterval 함수) 숫자가 줄어들게 하기
 * this.count 가 0이면 clearInterval 함수 종료시키기 (단, setInterval 함수를 변수로 담아줘야 함)
 
@@ -20,7 +21,7 @@
 ## 3. 0초가 끝났을 때 컴퓨터가 선택한 값이 보여지게 하기
 * data 에 comChoice 변수를 null 로 설정
 * computed 속성을 사용하여 comChoice 가 null 이면 ? 물음표 이미지 보여지게 하고, 값이 있으면 손 이미지 보여지게 하기
-* number 라는 변수를 만들고, Math.random() 함수로 숫자를 랜덤으로 나오게 변수에 할당한다.
+* comSelect 메소드 : number 라는 변수를 만들고, Math.random() 함수로 숫자를 랜덤으로 나오게 변수에 할당한다.
 * if 문을 통해 number 의 분기점을 지정해 주어서 가위, 바위, 보가 나오게 한다.
 * count의 값이 0 이 되는 것을 알기 위해 watch 감시자를 사용한다.
 
