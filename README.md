@@ -3,10 +3,8 @@
 ## 1. radio box를 선택한 이미지 보여지게 하기
 * v-for 반복문으로 radio 뒤에 가위,바위,보 글씨 나오게 하기 : data 에 selects 배열 안에 객체로 만들기
 * :value="select.value" 고 {{ selects.name }}으로 바인딩
-
 * 이미지 태그에 src 속성을 v-bind (태그의 속성을 동적으로 변경할 때 사용)
 * computed 속성을 사용하여 myChoice 가 null 이면 ? 물음표 이미지가 보여지게 하고, 값이 있으면 해당 손 이미지가 보여지게 한다.
-
 * data 에 myChoice, comChoice 변수를 null 로 설정
 * radio box 에 v-model="myChoice"로 양방향 데이터 바인딩 (* v-model 로 연결시킨 데이터는 value 값을 가지게 된다)
 
